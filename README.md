@@ -336,6 +336,13 @@ let test#ruby#rspec#options = {
 \}
 ```
 
+### Asyncrun terminal position
+`Asyncrun` strategy will open a split window on the bottom by default, but you can configure a [different position](https://github.com/skywind3000/asyncrun.vim#internal-terminal).
+
+```vim
+let test#asyncrun#pos = "left"
+````
+
 ### Vim8 / Neovim terminal position
 
 Both the `neovim` and `Vim8 Terminal` strategy will open a split window on the

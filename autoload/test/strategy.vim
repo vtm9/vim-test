@@ -33,7 +33,8 @@ function! test#strategy#makegreen(cmd) abort
 endfunction
 
 function! test#strategy#asyncrun(cmd) abort
-  execute 'AsyncRun '.a:cmd
+  let pos = get(g:, 'test#asyncrun#pos', 'bottom')
+  execute 'AsyncRun -pos='.pos.' '.a:cmd
 endfunction
 
 function! test#strategy#asyncrun_setup_unlet_global_autocmd() abort
